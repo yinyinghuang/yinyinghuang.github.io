@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+	background-color: #dedede;
+	font-family: "微软雅黑";
+	font-size: small;
+	line-height: 1.8em;
+}
+#head{
+    width: 100%;
+    height: 60px;
+    background-color: #333333;
+    color: #fff; 
+	position: relative;
+}
+#head img{
+	margin-left:30px; 
+}
+.nav{	
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+.nav li{
+	display: inline-block;
+	line-height: 58px;
+	margin-left:1em;
+}
+.nav li a{
+	text-decoration: none;
+	color: white;
+	font-size: .8em;
+}
+#mainbody{
+	margin: 25px;
+}
+#sidebar{
+    float: right;
+    background-color: #fff;          
+    width: 300px;
+    padding: 20px;
+    border-right:2px #848484 solid;
+	border-bottom:2px #848484 solid;	
+}
+#sidebar h2{
+	font-size: 1.2em;
+}
+.sub_bts{	
+	background-color:#3355d0;
+	width: 100%;
+	height:2em;
+	font-size: 1.5em;
+	color: #fff;
+	border: 1px #ccc solid;
+	border-radius:10px;
+}
+#content{    
+    margin-right: 380px;
+    
+}
+#content article{
+	background-color: #fff;
+	margin-bottom:20px;
+	padding: 20px;
+	border-right:2px #848484 solid;
+	border-bottom:2px #848484 solid;	  
+}
+article h2{
+	font-family: "黑体";
+	line-height: 1.8em;
+}
+article h3{
+	font-family: "黑体";
+	color: gray;
+	line-height: 1.8em;
+}
+.author_time{
+	font-family: "黑体";
+	color: gray;
+}
+ul{
+	list-style: none;
+}
+.pic{
+	display: inline-block;
+	width: 310px;
+	height: 285px;
+	border: 1px #ccc solid;
+	margin: 20px;
+	padding:10px; 
+}
+.pic p{
+	text-align: center;
+}
+ol{
+	margin-left:3em; 
+}
+#tab2 {
+	width: 100%;
+	border: 1px #ccc solid;
+	border-collapse:collapse;
+	text-align: left;
+}
+#tab2 thead th{
+	border: 1px #ccc solid;	
+	background-color: #333333;
+	color: #fff;
+}
+#tab2 td{
+	border: 1px #ccc solid;
+}
+.lastr{
+	background-color: #ccc;
+}
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: #333333;
+    color: #fff; 
+    font-family: "宋体";
+	text-align: center;
+	line-height: 60px;   
+}
+
