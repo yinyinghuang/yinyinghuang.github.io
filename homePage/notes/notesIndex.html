@@ -26,36 +26,38 @@
 	<div id="content">
 		
 		<div id="aside-nav">
-			<h2>分类</h2>
-			<ul>
-				<li>HTML/CSS<span class="count"></span>
-					<ul>
-						
-					</ul>
-				</li>
-				<li>Javascript<span class="count"></span>
-					<ul>
-						<li><a href="setTimer.html"  target="_blank">定时器的理解</a></li>
-						<li><a href="apply_call_callee_caller.html" target="_blank">apply/call/callee/caller</a></li>
-					</ul>
-				</li>
-				<li>Jquery<span class="count"></span>
-					<ul>
-						
-					</ul>
-				</li>
-			</ul>
+			<div id="wrap">
+				<h2>分类</h2>
+				<ul>
+					<li class="fir-menu">HTML/CSS<span class="count"></span>
+						<ul>
+							
+						</ul>
+					</li>
+					<li class="fir-menu">Javascript<span class="count"></span>
+						<ul>
+							<li class="sec-menu"><a href="setTimer.html" >定时器的理解</a></li>
+							<li class="sec-menu"><a href="apply_call_callee_caller.html">apply/call/callee/caller</a></li>
+						</ul>
+					</li>
+					<li class="fir-menu">Jquery<span class="count"></span>
+						<ul>
+							
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 		<div id="main">
 			<div class="section">
-				<h3><a  href="setTimer.html" target="_blank">定时器的理解</a></h3>
+				<h3><a  href="setTimer.html">定时器的理解</a></h3>
 				<p>重复定时器setInterval(fn,interval) </p>
 				<p>在指定周期interval（毫秒）之后向代码队列添加fn。返回timerId值。</p>
 				<p>js是单线程运行环境，进程同时只能做一件事情，如果事情多起来，就会存放在代码队列中。</p>
 			</div>
 			<div class="section">
-				<h3><a href="apply_call_callee_caller.html" target="_blank">apply/call/callee/caller的理解</a></h3>
+				<h3><a href="apply_call_callee_caller.html">apply/call/callee/caller的理解</a></h3>
 				<strong>fn.call(obj,param)</strong>
 				<p>将fn中的this指向了obj的this,obj拥有了fn中的属性及方法；</p>
 				<strong>call与apply</strong>的区别<p>

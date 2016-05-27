@@ -1,10 +1,12 @@
 $(function(){
 	//侧栏导航
-	$("#aside-nav span").each(function(){
-		var len=$(this).next().children().length;
-		$(this).html("("+len+")");
-	});
-	$("#wrap").children("ul").children("li").click(function(){
+	$("#aside-nav").load("notesIndex.html #wrap",function(){		
+		$("#aside-nav span").each(function(){
+			var len=$(this).next().children().length;
+			$(this).html("("+len+")");
+		});
+	});	
+	$("#aside-nav").on("click",".fir-menu",function(){
 		var $secList=$(this).children("ul");
 		if ($secList.is(":hidden")) {			
 			$secList.slideDown();
@@ -12,6 +14,7 @@ $(function(){
 			$secList.slideUp();
 		}		
 	});
+	
 	//回到顶部
 	$(window).scroll(function(){
 		if($(window).scrollTop()>100){

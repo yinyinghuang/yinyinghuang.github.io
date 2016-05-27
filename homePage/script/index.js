@@ -51,7 +51,6 @@ $(function(){
 							i++;
 							setTimeout(function(){
 								$this.addClass("show");
-								console.log(i);
 							},700*i);
 						}
 					});
