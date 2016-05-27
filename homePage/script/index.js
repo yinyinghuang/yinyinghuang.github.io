@@ -85,6 +85,10 @@ $(function(){
 		}
 
 	});
+/* 顶部导航 */
+	$("#nav-about-me").click(function(){
+		alert("建设中~");
+	});
 /* 首页 */
 	$("#reality").click(function(){
 		var img=$("#me").find("img");
