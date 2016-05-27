@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>可视化排序算法</title>
+	<style type="text/css">
+		body{
+			background: #333;
+		}
+		#main{
+			width: 1000px;
+			margin: 0 auto;
+		}		
+		#bts{
+			width: 1000px;
+			margin: 15px auto;
+		}
+		button{
+			width: 100px;
+			height: 30px;
+			border-radius: 10px;
+		}
+		#info{
+			display: inline-block;
+			margin-left: 60px;
+		}
+		.type,.e-time{
+			display: inline-block;
+			width: 160px;
+			height: 30px;
+			padding: 0 10px;
+			border-radius: 10px;
+			line-height: 30px;
+			font-size: 14px;
+			background: #e5e5e5;
+		}
+		.type div,.e-time div{
+			display: inline-block;
+			margin-left: 10px;
+		}
+		#type,#e-time{
+			color: #00f;
+		}
+		#show{
+			width: 1000px;
+			height: 500px;
+			display: flex;
+			flex-flow: row;
+			justify-content: flex-start;
+			align-items: flex-end;
+			align-content: flex-end;
+			background: #e5e5e5;
+
+		}
+
+		.item{
+			width: 8px;
+			border: 1px solid #999;
+			background-color: #777;
+			margin: 0 2px;
+		}
+
+	</style>
+	
+</head>
+<body>
+	<div id="main">
+		<div id="bts">
+			<button id="reset">重置</button>
+			<button id="bubble">冒泡排序</button>
+			<button id="insert">插入排序</button>
+			<button id="select">选择排序</button>
+			<button id="quick">快速排序</button>
+			<div id="info">
+				<div class="type">
+					<div>类型:</div>
+					<div id="type"></div>
+				</div>
+				<div class="e-time">
+					<div>耗时:</div>
+					<div id="e-time"></div>
+				</div>
+				
+			</div>				
+		</div>
+		<div id="show">		
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="visualizingSort.js"></script>
+</body>
+</html>

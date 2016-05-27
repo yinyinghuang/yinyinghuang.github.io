@@ -1,0 +1,47 @@
+重复定时器setInterval(fn,interval) 
+在指定周期interval（毫秒）之后向代码队列添加fn。返回timerId值。
+
+js是单线程运行环境，进程同时只能做一件事情，如果事情多起来，就会存放在代码队列中。
+
+当定时器调用激活后，定时器每隔interval毫秒后就会带着（fn—timerId）去骚扰下js引擎：“快点快点让进程帮我干fn”。这个时候js引擎就会看进程有空不，如果：
+
+1.进程闲着没事做，js引擎就会说：“好嘞”。让队列接下（fn—timerId）转手交给进程去办。
+
+2.进程正在做事，js引擎就会看下队列手头上是不是已经有fn了， 
+(1)队列上没有fn，js引擎就会说：“进程在在忙，我让队列把（fn—timerId）收下，等进程一有空就让它办！~~”
+
+(2)队列上已经有fn，js引擎就会很生气的对定时器说：“你都来过一次了，你怎么又来了，走开！”定时器想着“名字一样，内容不一定一样啊”悻悻的走开。
+
+具体例子： 
+elem.onclick=function(){ 
+省略 
+setInterval（fn，200）； 
+省略 
+} 
+假设：onclick事件处理程序需要300ms，在5ms是调用了setInterval。
+
+那么在205ms时，定时器就会骚扰js引擎，但此时进程在忙onclick，所以队列将(fn—timerId=1)收下。
+
+在300ms时，进程忙完onclick，接下队列手中的(fn—timerId=1)开始干。
+
+在405ms时，定时器又来骚扰js引擎，但此时进程在忙fn，队列将(fn—timerId=2)收下。
+
+在605ms时，定时器又来骚扰js引擎，但此时队列中已经存在fn了，队列就拒收(fn—timerId=3)，
+
+在这种情况下，存在两个问题：
+
+（1） 多个定时器代码间隔比interval小。(fn—timerId=1)执行结束后(fn—timerId=2)马上被执行
+
+（2） 有个定时器代码跳过。(fn—timerId=3)就被跳过了。
+
+为避免这两个缺点，可以用以下
+
+setTimeout(function(){
+    fn;
+    setTimeout(arguments.callee,interval);
+},interval)
+setTimeout（fn,interval）在间隔interval之后，向队列添加fn，返回timerId值。只执行一次。在外层setTimeout执行fn之后才会调用内层setTimeout新建定时器，保证了前一次fn执行完之前不会向队列插入fn，这样就不会有被跳过的fn，前后两个fn间隔时间也有保障。
+
+clearInterval(timerId)/ clearTimeout(timerId)
+
+分别用来清除setInterval(fn,interval)和setTimeout(function()。

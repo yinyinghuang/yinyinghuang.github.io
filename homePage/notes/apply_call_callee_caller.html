@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>apply/call/callee/caller的理解</title>
+	<link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+
+</head>
+<body>
+	<header>
+		<div class="hf-inner">
+			<div id="logo">
+				<img src="../images/sunnydoll.jpg">
+				<span>过北踏居个人简历</span>
+			</div>		
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li><a class="cur-page" href="#">手记</a></li>
+					<li><a href="#">关于我</a></li>
+				</ul>
+			</nav>	
+		</div>			
+	</header><!-- head结束 -->
+	<div id="content">		
+		<div id="aside-nav">
+			<h2>分类</h2>
+			<ul>
+				<li>HTML/CSS<span class="count"></span>
+					<ul>
+						
+					</ul>
+				</li>
+				<li>Javascript<span class="count"></span>
+					<ul>
+						<li><a href="setTimer.html" target="_blank">定时器的理解</a></li>
+						<li><a href="apply_call_callee_caller.html" target="_blank">apply/call/callee/caller</a></li>
+					</ul>
+				</li>
+				<li>Jquery<span class="count"></span>
+					<ul>
+						
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div id="main">			       
+			<article>
+				<h2>apply/call/callee/caller的理解</h2>
+				<strong>fn.call(obj,param)</strong>
+				<p>将fn中的this指向了obj的this,obj拥有了fn中的属性及方法；</p>
+				<strong>call与apply</strong>的区别<p>在于param的形式，apply必须为arguments，即类数组。</p>
+				<strong>fn.caller</strong>
+				<p>返回正在调用fn的函数；</p>
+				<strong>arguments.callee</strong>
+				<p>返回当前正在执行的函数；常用于匿名函数递归；<br />
+				arguments.length实参数<br />
+				arguments.callee.length形参数；</p>
+				        </div>
+
+			</article>
+		</div>
+		<div id="back-to-top">
+			<img src="../images/top.png" alt="回到顶部">
+			<div>返回顶部</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="script/notesIndex.js"></script>
+</body>
+</html>

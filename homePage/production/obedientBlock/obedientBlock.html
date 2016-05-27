@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>obedient block</title>
+	<link rel="stylesheet" type="text/css" href="obedientBlock.css">
+
+</head>
+<body>
+	<div id="content">
+		<div id="main">
+			<div class="tab">
+				<table border="0" cellspacing="0" cellpadding="0">		
+					<tr>
+						<td></td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="top"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<div class="op">		
+				<button id="start">执行</button>
+				<button id="reset">重置</button>	
+				<button id="build-wall">彩虹墙</button>
+				<div class="op_input">
+					<div id="order"></div>
+					<textarea id="op_type" ></textarea>
+				</div>		
+				
+			</div>
+		</div>
+		<div id="aside">
+			<h2>执行命令如下：</h2>
+			
+				<p>GO number：向紫色边所面向的方向前进number格</p>
+				<p>TUN LEF：向左转</p>
+				<p>TUN RIG：向右转</p>
+				<p>TUN BAC：向右转</p>
+				<p>TRA LEF number：向屏幕的左侧移动number格，方向不变</p>
+				<p>TRA TOP number：向屏幕的上面移动number格，方向不变</p>
+				<p>TRA RIG number：向屏幕的右侧移动number格，方向不变</p>
+				<p>TRA BOT number：向屏幕的下面移动number格，方向不变</p>
+				<p>MOV LEF number：方向转向屏幕左侧，并向屏幕的左侧移动number格</p>
+				<p>MOV TOP number：方向转向屏幕上面，向屏幕的上面移动number格</p>
+				<p>MOV RIG number：方向转向屏幕右侧，向屏幕的右侧移动number格</p>
+				<p>MOV BOT number：方向转向屏幕下面，向屏幕的下面移动number格</p>
+				<p>BUILD：建墙，方块无法跨越</p>
+				<p>BRU color：粉刷墙，color与css编码方式一致</p>
+				<p>以上number可省略，默认为1</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="obedientBlock.js"></script>
+</body>
+</html>

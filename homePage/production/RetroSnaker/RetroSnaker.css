@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;	
+	font-weight:bold;
+}
+body{
+	background-color: #444;
+	position: relative;
+	font-size: 14px;
+	font-family: Verdana;
+}
+#content{
+	width: 1100px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#main{
+	float: left;
+	position: relative;
+}
+#aside{
+	width: 340px;
+	margin-top: 10px;
+	padding: 10px;
+	float: right;
+	background: #ccc;
+}
+table{
+	/*绝对宽度*/
+	margin: 10px auto;
+	table-layout: fixed;
+	
+	border-collapse: collapse;
+}
+td{	
+	width: 35px;
+	height: 35px;
+	border: 1px solid #fff;
+	overflow: hidden;
+}
+.snaker{
+	height: 100%;
+	width: 100%;
+	background: #2196F3;
+	color: white;	
+}
+.apple{
+	height: 100%;
+	width: 100%;
+	background: #FFEB3B;
+	color: white;
+	border-radius: 20px; 
+}
+.bts{
+	display: flex;
+	flex: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 720px;
+	margin: 0px auto;
+	overflow: hidden;
+	background-color: #9E9E9E;
+}
+button{
+	padding: 5px;
+	width: 80px;
+	height: 40px;
+	margin: 20px;
+	border-radius: 10px;
+	background-color: #638B60;
+}
+#setting{
+	width: 300px;
+}
+#setting p{
+	font: 2em;	
+}
+fieldset {
+	padding:10px;
+	margin:10px;
+	width:200px;
+	height: 100px;
+	border:#638B60 solid 1px;
+} 
+legend {
+	font-size: 20px; 
+} 
+#action{
+	width: 160px;
+}
+#action button{
+	display: block;
+}
+#dir {
+	width: 260px;
+	float: right;
+}
+#dir button:first-child,
+#dir button:last-child{
+	display: block;
+	margin: 10px auto;
+}
+#result{
+	display: none;
+	width: 300px;
+	height: 150px;
+	padding: 20px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -100px; 
+	background-color: #F1F8E9;	
+	text-align: center;
+	font-size: 2em; 
+	z-index: 1500;
+}
+#result span,
+#result h2{
+	color:red;
+}
+#mask{
+	background-color: #000;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity:0.5;
+	-moz-opacity:0.5;
+	filter: alpha(opacity=50);
+	z-index: 1000;
+}
+.goal{
+	width: 250px;
+	margin:10px auto;	
+	font-size: 25px; 
+}
+#goal{
+	display: inline-block;	
+	width: 100px;
+	height: 40px;
+	margin-right:40px; 
+	color: red;
+	background: #fff;
+	text-align: center;
+	line-height: 40px;
+}
+#instruction dl dd{
+	text-indent: 2em;
+	line-height: 1.8em;
+}
+#instruction dl dt{
+	background: #638B60;
+	font-size: 1.2em;
+	line-height: 1.8em;
+}
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随手记，随心想</title>
+	<link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+
+</head>
+<body>
+	<header>
+		<div class="hf-inner">
+			<div id="logo">
+				<img src="../images/sunnydoll.jpg">
+				<span>过北踏居个人简历</span>
+			</div>		
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li><a class="cur-page" href="#">手记</a></li>
+					<li><a href="#">关于我</a></li>
+				</ul>
+			</nav>	
+		</div>			
+	</header><!-- head结束 -->
+	<div id="content">
+		
+		<div id="aside-nav">
+			<h2>分类</h2>
+			<ul>
+				<li>HTML/CSS<span class="count"></span>
+					<ul>
+						
+					</ul>
+				</li>
+				<li>Javascript<span class="count"></span>
+					<ul>
+						<li><a href="setTimer.html"  target="_blank">定时器的理解</a></li>
+						<li><a href="apply_call_callee_caller.html" target="_blank">apply/call/callee/caller</a></li>
+					</ul>
+				</li>
+				<li>Jquery<span class="count"></span>
+					<ul>
+						
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div id="main">
+			<div class="section">
+				<h3><a  href="setTimer.html" target="_blank">定时器的理解</a></h3>
+				<p>重复定时器setInterval(fn,interval) </p>
+				<p>在指定周期interval（毫秒）之后向代码队列添加fn。返回timerId值。</p>
+				<p>js是单线程运行环境，进程同时只能做一件事情，如果事情多起来，就会存放在代码队列中。</p>
+			</div>
+			<div class="section">
+				<h3><a href="apply_call_callee_caller.html" target="_blank">apply/call/callee/caller的理解</a></h3>
+				<strong>fn.call(obj,param)</strong>
+				<p>将fn中的this指向了obj的this,obj拥有了fn中的属性及方法；</p>
+				<strong>call与apply</strong>的区别<p>
+			</div>
+		</div>
+		<div id="back-to-top">
+			<img src="../images/top.png" alt="回到顶部">
+			<div>返回顶部</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="script/notesIndex.js"></script>
+</body>
+</html>
