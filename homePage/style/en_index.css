@@ -319,7 +319,7 @@ button{
     background: #000;
 }
 #about-me-intr p{
-	width: 550px;
+	width: 850px;
 	margin: 500px auto 0;
 	text-align: left;
 	text-indent: 2em;
@@ -463,7 +463,7 @@ blockquote{
 }
 #contact-wanna-say{
 	width: 580px;
-	margin: 0 auto;
+	margin: 0 auto 40px;
 }
 #contact-wanna-say p{
 	text-align: left;
