@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">	
+		#main{
+			width: 600px;
+			margin: 10px auto;
+			padding: 10px;
+			background: #ccc;
+			font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+
+		}	
+		button{
+			margin-bottom: 8px;
+		}
+		div.num-comfirm{
+			padding: 10px 0;
+		}
+		textarea{
+			resize: none;
+		}
+		pre{
+			font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<label for="num">Input the numbers and split with space:</label>
+		<div class="num-comfirm">
+			<textarea type="text" name="num" id="num" cols="50" placeholder="please input numbers"></textarea>
+			<button id="comfirm">Comfirm</button>
+		</div>
+		
+		<span>result:<span id="result"></span></span>
+		<pre>
+function solution(arr){			
+	//define two varibles to record the maximum index and secondeary index,
+	//and then loop through the array.
+	var first=arr[0]&gt;=arr[1]?0:1,
+		second=arr[0]&gt;=arr[1]?1:0,
+		j=2;				
+	while(j&lt;arr.length){
+		if(arr[j]&gt;arr[first]){
+			second=first;
+			first=j;
+		}else if(arr[j]&gt;arr[second]){
+			second=j;
+		}
+		j++;
+	}
+	return arr[first]*arr[second];		
+}
+		</pre>	
+	</div>	
+	<script type="text/javascript">
+		function solution(arr){			
+			//define two varibles to record the maximum index and secondeary index,
+			//and then loop through the array;
+			var first=arr[0]>=arr[1]?0:1,
+				second=arr[0]>=arr[1]?1:0,
+				j=2;				
+			while(j<arr.length){
+				if(arr[j]>arr[first]){
+					second=first;
+					first=j;
+				}else if(arr[j]>arr[second]){
+					second=j;
+				}
+				j++;
+			}
+			return arr[first]*arr[second];		
+		}
+
+
+		var comfirm=document.getElementById("comfirm"),
+			result=document.getElementById("result");
+		comfirm.onclick=function(){
+			var num=document.getElementById("num").value.trim();
+			var arr=num.split(/\s+/g);
+			for(var i=0;i<arr.length;i++){
+				arr[i]=parseInt(arr[i]);
+			}			
+			var res=solution(arr);
+			result.innerHTML=res;
+		};
+	</script>
+</body>
+</html>

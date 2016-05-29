@@ -484,3 +484,6 @@ blockquote{
 	background: #ac8;
 	border-radius: 20px;
 }
+#contact a{
+	text-decoration: underline;
+}

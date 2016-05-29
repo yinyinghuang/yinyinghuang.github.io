@@ -71,6 +71,18 @@ header ul li a{
     font-weight: 600;
     color: #000;
 }
+#lang{
+	width: 250px;
+	margin: 0 auto;
+}
+#lang span{
+	font-size: 1.2em;
+	font-weight: 600;
+}
+#lang button{
+	line-height: 25px;
+    margin-left: 10px;
+}
 
 /* 侧栏导航*/
 aside{

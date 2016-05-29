@@ -89,6 +89,9 @@ $(function(){
 	$("#nav-about-me").click(function(){
 		alert("建设中~");
 	});
+	$("#lang").find("button").click(function(){
+		window.location.pathname="homePage/en_index.html";
+	});
 /* 首页 */
 	$("#reality").click(function(){
 		var img=$("#me").find("img");
