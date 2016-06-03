@@ -1,2 +1,3 @@
 # yinyinghuang.github.io
-我要神经错乱了！！！
+慢慢来，一切都会好的~
+
