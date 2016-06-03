@@ -51,11 +51,7 @@ td{
 	color: white;
 	border-radius: 20px; 
 }
-.bts{
-	display: flex;
-	flex: row;
-	justify-content: space-around;
-	align-items: center;
+.bts{	
 	width: 720px;
 	margin: 0px auto;
 	overflow: hidden;
@@ -70,6 +66,7 @@ button{
 	background-color: #638B60;
 }
 #setting{
+	float: left;
 	width: 300px;
 }
 #setting p{
@@ -86,12 +83,14 @@ legend {
 	font-size: 20px; 
 } 
 #action{
+	float: left;
 	width: 160px;
 }
 #action button{
 	display: block;
 }
 #dir {
+	float: left;
 	width: 260px;
 	float: right;
 }

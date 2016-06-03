@@ -26,6 +26,7 @@ body{
 	line-height: 1.8em;
 	background: url(../images/beijing.jpg);
 	position: relative;
+	overflow-x: scroll;
 }
 
 /*头部导航*/
@@ -40,7 +41,7 @@ header{
 	z-index: 1000;
 }
 .hf-inner{
-	width: 1300px;
+	width: 1050px;
 	margin: 0 auto;
 }
 #logo{
@@ -92,6 +93,7 @@ aside{
     top: 50%;
     right: 27px;
     -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 #menu{
 	margin: 0;
@@ -185,10 +187,14 @@ aside{
 	background: #3a3;
 	transform: scale(0);
 	transition: transform 1s;
+	-webkit-transform: scale(0);
+	-webkit-transition: transform 1s;
 }
 .inner .head.show:after{
 	transform: scale(1);
 	transition: transform 1s;
+	-webkit-transform: scale(1);
+	-webkit-transition: transform 1s;
 }
 button{
 	padding: 6px 10px;
@@ -255,11 +261,16 @@ button{
 	border-radius: 10px;
 	transform: translate(550px,-250px) rotate(180deg) scale(0.1);
 	transition:  transform 1s;
+	animation: greenPulse 2s infinite;
+	-webkit-transform: translate(550px,-250px) rotate(180deg) scale(0.1);
+	-webkit-transition:  transform 1s;
 	-webkit-animation: greenPulse 2s infinite;
 }
 #home-page #hide.show{
 	transform: scale(1) translate(0,0);
 	transition:  all 1s;
+	-webkit-transform: scale(1) translate(0,0);
+	-webkit-transition:  all 1s;
 }
 
 #home-page-photo #look-me{
@@ -329,6 +340,7 @@ button{
     height: 2px;
     overflow: hidden;
     transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
     background: #000;
 }
 #about-me-intr p{
@@ -348,6 +360,7 @@ blockquote{
 	font-size: 18px;
 	font-weight: 600;
 	transform: scale(0);
+	-webkit-transform: scale(0);
 }
 #skill-list>li{
 	height: 250px;
@@ -358,10 +371,13 @@ blockquote{
 }
 #skill-list .icon{
 	transform: scale(0);
+	-webkit-transform: scale(0);
 }
 #skill-list .icon:hover{
 	transform: scale(1.2) !important;
 	transition: transform .8s !important;
+	-webkit-transform: scale(1.2) !important;
+	-webkit-transition: transform .8s !important;
 }
 #skill-list .name{
 	margin:10px auto;
@@ -375,6 +391,8 @@ blockquote{
 	border-bottom: 20px solid #222;
 	transform: rotate(0);
 	transition: transform .5s;
+	-webkit-transform: rotate(0);
+	-webkit-transition: transform .5s;
 }
 #skill-list .hint{
 	list-style: disc;
@@ -392,6 +410,8 @@ blockquote{
 #skill-list li.selected .flag{
 	transform: rotate(180deg);
 	transition: transform .5s;
+	-webkit-transform: rotate(180deg);
+	-webkit-transition: transform .5s;
 }
 
 /*product*/
@@ -434,15 +454,20 @@ blockquote{
 	left: 0;
 	top: 115px;
 	transform: translateY(-200px);
+	-webkit-transform: translateY(-200px);
 	font-size: 20px;
 }
 #pro-list ul li:hover img{
 	transform: scale(1.2);
 	transition: transform .5s;
+	-webkit-transform: scale(1.2);
+	-webkit-transition: transform .5s;
 }
 #pro-list ul li:hover .title{
 	transform: translateY(0);
 	transition: transform .1s .2s;
+	-webkit-transform: translateY(0);
+	-webkit-transition: transform .1s .2s;
 } 
 #pro-more{
 	width: 500px;
@@ -452,10 +477,14 @@ blockquote{
 	position: relative;
 	transform: scale(0);
 	transition: transform 1s;
+	-webkit-transform: scale(0);
+	-webkit-transition: transform 1s;
 }
 #pro-more.show{
 	transform: scale(1);
 	transition: transform 1s;
+	-webkit-transform: scale(1);
+	-webkit-transition: transform 1s;
 }
 #pro-more span{
 	display: none;
@@ -468,10 +497,14 @@ blockquote{
 #contact-content{	
 	transform: translateY(500px);
 	transition: transform 5s;
+	-webkit-transform: translateY(500px);
+	-webkit-transition: transform 5s;
 }
 #contact-content.show{	
 	transform: translateY(0);
 	transition: transform 1s;
+	-webkit-transform: translateY(0);
+	-webkit-transition: transform 1s;
 }
 #contact-wanna-say{
 	width: 780px;
@@ -487,6 +520,8 @@ blockquote{
 	font-weight: bolder;
 	transform: scale(1.2);
 	transition: all .5s;
+	-webkit-transform: scale(1.2);
+	-webkit-transition: all .5s;
 	margin: 8px;
 }
 #contact-info{
